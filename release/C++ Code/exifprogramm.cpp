@@ -143,7 +143,21 @@ while (true) { //*Schleife über gesamte Programm
 
         getline(cin, command);
         command = toLower(command); //Prüft eingegebenen Text auf Großbuchstaben
-            
+        
+           // Abkürzungen auf vollständige Befehle abbilden
+    if (command == "l")
+        command = "lesen";
+    else if (command == "s")
+        command = "schreiben";
+    else if (command == "d")
+        command = "loeschen";
+    else if (command == "e")
+        command = "export";
+    else if (command == "z")
+        command = "zuruck";
+    else if (command == "x")
+        command = "exit"; 
+        
         if (command == "zuruck") //Gang zurück zum Datei Auswahl
             break;
 
